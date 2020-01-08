@@ -62,7 +62,7 @@ export default class App extends Component {
         console.log(item)
         this.setState(state => {
          const cartItems = state.cartItems.filter(cartItem => cartItem.id !== item.id)
-         localStorage.setItem('cartItem', cartItems)
+         localStorage.setItem('cartItems', cartItems)
 
          return {cartItems}
         })

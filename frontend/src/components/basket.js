@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import util from '../util'
 export default class basket extends Component {
     render() {
         const {cartItems} = this.props;
@@ -20,6 +20,9 @@ export default class basket extends Component {
                             )
                         }) }
                         </ul>
+                        Total :{ util.formatCurrency(cartItems.reduce((a,curr) => a + curr.price * curr.count, 0)) }
+                        <br/>
+                        <button className = 'btn btn-primary' onClick = {() => alert('Checkout Needs impementation')}>Checkout</button>
                     </div>
                 }
             </div>
