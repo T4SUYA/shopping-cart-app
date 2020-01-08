@@ -5,15 +5,23 @@
 
 ## First
 
-First you will need to type npm install or yarn to install all dependecies.
+First you will need to type
+``` 
+npm install or yarn
+
+to install all dependecies.
 
 ## Second 
 
-Now, type json-server public/db.json --port 8000 to run the API Rest
+Now, type: 
+```
+json-server public/db.json --port 8000 
+
+to run the API Rest
 
 ## And the last part
 
-Now just type 
+Now just type:
 ```
 npm start 
 
