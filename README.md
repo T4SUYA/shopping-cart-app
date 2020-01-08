@@ -5,7 +5,11 @@
 
 ## First
 
-First you will need to type
+First, you need to enter on the frontend folder, so type:
+```
+cd frontend
+```
+then, you will need to type:
 ``` 
 npm install or yarn
 ```
