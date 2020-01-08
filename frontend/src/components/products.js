@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import util from '../util'
 export default class products extends Component {
     render() {
-        const productItens = this.props.products.map(product => (
+        let filteredProducts = this.props.products.filter(
+            (product) => {
+                return product.title.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1
+            })
+        const productItens = filteredProducts.map(product => (
             <div className = 'col-md-4' key = {product.id}>
                 <div className = 'thumbnail text-center'>
                     <a href = {`#${product.id}`} onClick = {(e) => this.props.handleAddToCart(e, product)}>

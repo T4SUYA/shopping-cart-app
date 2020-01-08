@@ -5,12 +5,16 @@ export default class filter extends Component {
         return (
             <div className='row'>
                 <div className ='col-md-4'>
-                    {this.props.count} products found.
+                    <form class="form-inline md-form form-sm mt-10">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                    aria-label="Search" onChange = { (e) => this.props.updateSearch(e) }/>
+                </form>  
                 </div>
-                <div className ='col-md-4'>
-                    <label>
+                <div className ='col-md-4 form-group'>
+                    <label for="exampleFormControlSelect1">
                         Filter by price
-                        <select className = 'form-control' value = {this.props.sort}
+                        <select className = 'form-control' id="exampleFormControlSelect1" value = {this.props.sort}
                     onChange = {this.props.handleChangeSort}>
                             <option value = ''>Select</option>
                             <option value = 'lowest'>Lowest to highest</option>

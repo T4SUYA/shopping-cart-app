@@ -9,12 +9,14 @@ export default class App extends Component {
         this.state = {
             products: [],
             filteredProducts: [],
-            cartItems: []
+            cartItems: [],
+            search: ''
         }
         this.handleChangeSort = this.handleChangeSort.bind(this)
         this.handleChangeSize = this.handleChangeSize.bind(this)
         this.handleAddToCart = this.handleAddToCart.bind(this)
         this.handleRemoveFromCart = this.handleRemoveFromCart.bind(this)
+        this.updateSearch = this.updateSearch.bind(this)
     }
     handleChangeSort(e) {
         this.setState({sort: e.target.value})
@@ -67,6 +69,10 @@ export default class App extends Component {
          return {cartItems}
         })
     }
+    updateSearch(e) {
+        e.preventDefault()
+        this.setState({ search: e.target.value.substr(0,20) })
+    }
     componentDidMount() {
         fetch('http://localhost:8000/products')
         .then(res => res.json())
@@ -75,7 +81,12 @@ export default class App extends Component {
             filteredProducts: data
         }))
         if(localStorage.getItem('cartItems')){
-            this.setState({cartItems: JSON.parse(localStorage.getItem('cartItems'))})
+            try {
+                this.setState({cartItems: JSON.parse(localStorage.getItem('cartItems'))})
+            } catch (error) {
+                console.log(error)
+            }
+            
         }
 
     }
@@ -87,8 +98,8 @@ export default class App extends Component {
             <div className = 'row'>
                 <div className ='col-md-8'>
                     <Filter size = {this.state.size} sort = { this.state.sort } handleChangeSize = {this.handleChangeSize}
-                    handleChangeSort = {this.handleChangeSort} count = {this.state.filteredProducts.length} />
-                    <Products products = {this.state.filteredProducts} handleAddToCart = {this.handleAddToCart}/>
+                    handleChangeSort = {this.handleChangeSort} count = {this.state.filteredProducts.length} updateSearch = {this.updateSearch} />
+                    <Products products = {this.state.filteredProducts} handleAddToCart = {this.handleAddToCart} search = {this.state.search}/>
                 </div>
                 <div className ='col-md-4'>
                     <Basket cartItems = {this.state.cartItems} handleRemoveFromCart = {this.handleRemoveFromCart}/>
