@@ -20,19 +20,23 @@ export default class App extends Component {
     }
     handleChangeSort(e) {
         this.setState({sort: e.target.value})
-        this.listProducts();
+        this.listProductsbyPrice();
     }
     handleChangeSize(e) {
         this.setState({size: e.target.value})
-        this.listProducts();
+        this.listProductsbySize();
     }
-    listProducts() {
+    listProductsbyPrice() {
         this.setState(state => {
             if(state.sort !== '') {
-                state.products.sort((a,b) => (state.sort === 'lowest') ? (a.price > b.price? 1:-1): (a.price < b.price? 1:-1) )
+             return {filteredProducts: state.products.sort((a,b) => (state.sort === 'lowest') ? (a.price > b.price? 1:-1): (a.price < b.price? 1:-1) ) }   
             }else {
-                state.products.sort((a,b) => (a.id < b.price? 1:-1))
+                return {filteredProducts: state.products.sort((a,b) => a.id < b.id? 1:-1)}
             }
+        })
+    }
+    listProductsbySize() {
+        this.setState(state => {
             if (state.size !== ''){
                 return { filteredProducts: state.products.filter(a =>
                     a.availableSizes.indexOf(state.size.toUpperCase()) >= 0    
@@ -41,7 +45,6 @@ export default class App extends Component {
                 return {filteredProducts: state.products}
             }
         })
-        return {filteredProducts: this.state.products}
     }
     handleAddToCart(e, product) {
         this.setState(state => {
