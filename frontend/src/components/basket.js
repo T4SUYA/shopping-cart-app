@@ -13,7 +13,7 @@ export default class basket extends Component {
                         { cartItems.map(item => {
                             return(
                                     <li className = 'list-group-item' key = {item.id}>
-                                        <b> {item.title}<br/> Qtd:{item.count}<br/>Price:{item.price * item.count} </b>
+                                        <b> {item.title}<br/> Qtd:{item.count}<br/>Price:{util.formatCurrency(item.price * item.count)} </b>
                                         <button type = 'button' className = 'close' aria-label = 'Close'
                                         onClick = {(e) => this.props.handleRemoveFromCart(e,item)}
                                         >X</button>

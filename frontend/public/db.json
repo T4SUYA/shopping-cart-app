@@ -2,9 +2,8 @@
     "products": [
       {
         "id": 1,
-        "sku": 18644119330491312,
-        "title": "Sphynx Tie Dye Grey T-Shirt",
-        "description": "Sphynx Tie Dye Grey",
+        "imgId": "fnaticcs",
+        "title": "Fnatic CSGO Team T-Shirt",
         "availableSizes": [
           "X",
           "L",
@@ -16,9 +15,8 @@
       },
       {
         "id": 2,
-        "sku": 11854078013954528,
-        "title": "Danger Knife Grey T-Shirt",
-        "description": "Danger Knife Grey",
+        "imgId": "fortnite",
+        "title": "Fortnite T-Shirt",
         "availableSizes": [
           "X",
           "M",
@@ -29,9 +27,8 @@
       },
       {
         "id": 3,
-        "sku": 876661122392077,
-        "title": "White DGK Script Tee",
-        "description": "White DGK Script",
+        "imgId": "freefire",
+        "title": "Free fire Tee",
         "availableSizes": [
           "X",
           "M",
@@ -42,9 +39,8 @@
       },
       {
         "id": 4,
-        "sku": 9197907543445677,
-        "title": "Born On The Streets  T-Shirt",
-        "description": "Born On The Streets",
+        "imgId": "navics",
+        "title": "NaVi CSGO Team T-Shirt",
         "availableSizes": [
           "XL"
         ],
@@ -53,9 +49,8 @@
       },
       {
         "id": 5,
-        "sku": 10547961582846888,
-        "title": "Tso 3D Short Sleeve T-Shirt A",
-        "description": "Tso 3D Short Sleeve",
+        "imgId": "spider",
+        "title": "Marvel's Spider Man T-Shirt",
         "availableSizes": [
           "X",
           "L",
@@ -66,9 +61,8 @@
       },
       {
         "id": 6,
-        "sku": 6090484789343891,
-        "title": "Man Tie Dye Cinza Grey T-Shirt",
-        "description": "Man Tie Dye Cinza Grey",
+        "imgId": "yasuo",
+        "title": "Yasuo LOL",
         "availableSizes": [
           "XL",
           "XXL"
@@ -78,9 +72,8 @@
       },
       {
         "id": 7,
-        "sku": 18532669286405342,
-        "title": "Crazy Monkey Black T-Shirt",
-        "description": "1977 Infantil",
+        "imgId": "gamer",
+        "title": "Gamer T-Shirt",
         "availableSizes": [
           "S"
         ],
@@ -90,9 +83,8 @@
       },
       {
         "id": 8,
-        "sku": 5619496040738316,
-        "title": "Tso 3D Black T-Shirt",
-        "description": "",
+        "imgId": "soft",
+        "title": "Dev T-Shirt",
         "availableSizes": [
           "XL"
         ],
@@ -102,9 +94,8 @@
       },
       {
         "id": 9,
-        "sku": 11600983276356165,
-        "title": "Crazy Monkey Grey",
-        "description": "",
+        "imgId": "joke",
+        "title": "Dev T-Shirt 2",
         "availableSizes": [
           "L",
           "XL"
