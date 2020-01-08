@@ -24,8 +24,8 @@ to run the API Rest
 
 ## And the last part
 
-Now just type:
+Now open a new terminal window and type:
 ```
 npm start 
 ```
-
+### that's it !
