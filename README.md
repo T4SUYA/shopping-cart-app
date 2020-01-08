@@ -13,6 +13,8 @@ Now, type json-server public/db.json --port 8000 to run the API Rest
 
 ## And the last part
 
-Now just tipe npm start 
+Now just type 
+```
+npm start 
 
 
