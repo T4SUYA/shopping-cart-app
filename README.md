@@ -12,7 +12,7 @@ then, you will need to type:
 ``` 
 npm install or yarn
 ```
-to install all dependecies.
+to install all dependencies.
 
 ## Second 
 
