@@ -4,10 +4,9 @@
 # How to run?
 
 ## First
-
-First, you need to enter on the frontend folder, so type:
+First you need to clone this repo, so type on your terminal:
 ```
-cd frontend
+git clone https://github.com/T4SUYA/shopping-cart-app.git
 ```
 then, you will need to type:
 ``` 
