@@ -8,7 +8,7 @@ export default class filter extends Component {
                     <form className="form-inline md-form form-sm mt-10">
                     <i className="fas fa-search" aria-hidden="true"></i>
                     <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                    aria-label="Search" onChange = { (e) => this.props.updateSearch(e) }/>
+                    aria-label="Search" onChange = { (e) => this.props.updateSearch(e) } onKeyPress={event => event.key === 'Enter' ? event.preventDefault() : null}/>
                 </form>  
                 </div>
                 <div className ='col-md-4 form-group'>
