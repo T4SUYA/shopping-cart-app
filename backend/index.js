@@ -1,12 +1,14 @@
 const express = require('express')
-
-const app = express()
-
+const http = require('http')
 const cors = require('cors')
-
 const routes = require('./routes')
+const dotenv = require('dotenv')
+const app = express()
+const server = http.createServer(app)
 
-const PORT = process.env.PORT || 3333
+
+
+dotenv.config()
 
 app.use(express.json())
 
@@ -14,6 +16,4 @@ app.use(cors())
 
 app.use(routes)
 
-app.listen(PORT, () => {
-    console.log(`Server has started at ${PORT}`)
-});
+server.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));
