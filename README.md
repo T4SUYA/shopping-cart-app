@@ -1,5 +1,9 @@
 # shopping-cart-app
- Shopping cart made with React - Kepha Chalenge
+ Shopping cart made with React - Kepha Challenge
+
+## Demo
+
+https://shopping-cart-jv.netlify.com
 
 # How to run?
 
