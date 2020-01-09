@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
 import Products from './components/products'
 import './App.css'
 import Filter from './components/filter'
 import Basket from './components/basket'
+import api from './services/api'
 export default class App extends Component {
     constructor(props){
         super(props)
@@ -76,22 +77,20 @@ export default class App extends Component {
         e.preventDefault()
         this.setState({ search: e.target.value.substr(0,20) })
     }
-    componentDidMount() {
-        fetch('http://localhost:8000/products')
-        .then(res => res.json())
-        .then(data => this.setState({
-            products: data,
-            filteredProducts: data
-        }))
+   async componentDidMount() {
+        const response = await api.get('/products')
+        console.log(response.data)
+        this.setState({
+            products: response.data.products,
+            filteredProducts: response.data.products
+        })
         if(localStorage.getItem('cartItems')){
             try {
                 this.setState({cartItems: JSON.parse(localStorage.getItem('cartItems'))})
             } catch (error) {
                 console.log(error)
-            }
-            
+            }     
         }
-
     }
     render() {
         return (

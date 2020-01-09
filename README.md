@@ -8,24 +8,30 @@ First you need to clone this repo, so type on your terminal:
 ```
 git clone https://github.com/T4SUYA/shopping-cart-app.git
 ```
-then, you will need to type:
+then, you will need go on the backend folder, then type in your terminal:
 ``` 
 npm install or yarn
 ```
 to install all dependencies.
 
+after that type:
+```
+npm start
+```
+to run the NodeJS server
+
 ## Second 
 
-Now, type: 
+Now, open a new terminal window, go to frontend folder, then type: 
 ```
-json-server public/db.json --port 8000 
+npm install or yarn
 ```
-to run the API Rest
+to install all dependencies.
 
-## And the last part
+then, type:
+```
+npm start
+```
+to start the React app.
 
-Now open a new terminal window and type:
-```
-npm start 
-```
 ### that's it !
